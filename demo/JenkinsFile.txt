@@ -6,12 +6,14 @@ pipeline {
             steps {
                 echo "Hello Checkout"
                 git 'https://github.com/Raja13196/git-tutorial.git'
+                
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Hello deploy'
                 bat 'cd demo/demo'
+                git checkout main
                 bat 'mvn clean'
             }
         }
