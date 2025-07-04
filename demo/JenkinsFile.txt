@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                echo "Hello Build"
+                echo "Hello Checkout"
+                git https://github.com/Raja13196/git-tutorial/tree/main
             }
         }
         stage('Deploy') {
