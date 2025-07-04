@@ -6,6 +6,11 @@ pipeline {
             steps {
                 echo "Hello Checkout"
                 git 'https://github.com/Raja13196/git-tutorial.git'
+                script {
+                    checkout scm
+                    // OR, to use retry
+                    checkout retry: 5, scm
+                }
                 
             }
         }
@@ -13,7 +18,6 @@ pipeline {
             steps {
                 echo 'Hello deploy'
                 bat 'cd demo/demo'
-                git checkout main
                 bat 'mvn clean'
             }
         }
