@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Hello Checkout"
-                git 'https://github.com/Raja13196/git-tutorial/tree/main'
+                git 'https://github.com/Raja13196/git-tutorial.git'
             }
         }
         stage('Deploy') {
