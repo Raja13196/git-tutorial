@@ -5,12 +5,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Hello Checkout"
-                git 'https://github.com/Raja13196/git-tutorial.git'
-                script {
-                    checkout scm
-                    // OR, to use retry
-                    checkout retry: 5, scm
-                }
+                checkout scm
+                echo "Checkout Hello Done"
+
                 
             }
         }
