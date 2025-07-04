@@ -10,8 +10,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Hello deploy'
-                sh 'cd demo/demo'
-                sh 'mvn clean'
+                bat 'cd demo/demo'
+                bat 'mvn clean'
             }
         }
         stage('Test') {
