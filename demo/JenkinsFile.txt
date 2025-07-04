@@ -16,8 +16,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Hello deploy'
-                dir('C:/Users/Mitra/Downloads/demo/demo')
+                dir('C:/Users/Mitra/Downloads/demo/demo'){
                 bat 'mvn clean'
+                }
             }
         }
         stage('Test') {
