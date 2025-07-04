@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'mvn clean'
+                sh """
+                cd demo/demo
+                mvn clean
+                """
             }
         }
         stage('Deploy') {
