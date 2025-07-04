@@ -18,6 +18,7 @@ pipeline {
                 echo 'Hello deploy'
                 dir('C:/Users/Mitra/Downloads/demo/demo'){
                 bat 'mvn clean'
+                sh 'mvn install'
                 }
             }
         }
