@@ -1,3 +1,4 @@
+currentBuild.displayName = "maven-#"+currentBuild.number
 pipeline {
     agent any  
     tools {
@@ -9,7 +10,6 @@ pipeline {
                 echo "Hello Checkout"
                 checkout scm
                 echo "Checkout Hello Done"
-                BUILD_ID= maven-${BUILD_ID}
 
                 
             }
