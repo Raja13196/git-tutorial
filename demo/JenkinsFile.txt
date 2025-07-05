@@ -9,6 +9,7 @@ pipeline {
                 echo "Hello Checkout"
                 checkout scm
                 echo "Checkout Hello Done"
+                BUILD_ID= maven-${BUILD_ID}
 
                 
             }
